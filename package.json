@@ -1,0 +1,28 @@
+{
+  "name": "blog-sentiment-analysis",
+  "description": "emotion process analysis over blogs authors",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heukirne/blog-sentiment-analysis.git"
+  },
+  "dependencies": {
+    "googleapis": "^15.0.0",
+    "sanitize-html": "^1.13.0",
+    "striptags": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/heukirne/blog-sentiment-analysis/issues"
+  },
+  "homepage": "https://github.com/heukirne/blog-sentiment-analysis#readme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Henrique Dias",
+  "keywords": [
+    "blog",
+    "sentiment",
+    "analysis"
+  ]
+}
