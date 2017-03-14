@@ -36,4 +36,4 @@ function getBlogChunk () {
 	});
 }
 
-setInterval(getBlogChunk, 30 * 1000);
+setInterval(getBlogChunk, 20 * 1000);

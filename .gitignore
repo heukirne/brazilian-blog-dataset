@@ -1,2 +1,6 @@
 .ipynb_checkpoints
 posts.csv.gz
+blogs/
+config.prod.js
+node_modules/
+blogs.tar.gz
