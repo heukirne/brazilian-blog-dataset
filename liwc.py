@@ -9,7 +9,7 @@ class LIWC:
         self.prefixes = []
         self.dim_map = {}
         self.dic = {}
-        self.path = 'LIWC2007_Portugues_win.dic'
+        self.path = 'lexicons/LIWC2007_Portugues_win.dic'
         self.start_line = 66
         self.create_LIWC_dim_maps()
         self.compute_prefixes_and_words()

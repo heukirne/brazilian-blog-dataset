@@ -3,3 +3,6 @@
 blogs/
 config.prod.js
 node_modules/
+__pycache__/
+idfBg
+
