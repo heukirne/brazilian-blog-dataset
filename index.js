@@ -11,6 +11,7 @@ var blogEvent = new BlogEvent();
 
 // global variables
 var count = 0;
+var readed = 0;
 var total = config.blogger.api.length-1;
 var error = false;
 
@@ -24,11 +25,13 @@ blogEvent.on('get', (blogID) => {
 // read blog IDs
 function getBlogChunk () {
 	count = 0;
+	readed = 0;
 	error = false;
 	var dirList = fs.readdirSync('./blogs/');
 	console.log('### getBlogChunk : ' + dirList.length + ' ###');
 	blogger.readBlogIDs((blogID) => {
-		if (count < total) {
+		readed++
+		if (count < total && readed > (dirList.length - 5000)) {
 			if (!blogger.blogExist(blogID)){ 
 			   	blogEvent.emit('get',blogID);
 			}
