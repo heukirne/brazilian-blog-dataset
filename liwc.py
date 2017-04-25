@@ -4,12 +4,15 @@ import codecs
 import re
 
 class LIWC:
-    def __init__(self):
+    def __init__(self, lang='pt'):
         self.words = []
         self.prefixes = []
         self.dim_map = {}
         self.dic = {}
-        self.path = 'lexicons/LIWC2007_Portugues_win.dic'
+        if lang == 'pt':
+            self.path = 'lexicons/LIWC2007_Portugues_win.dic'
+        else:
+            self.path = 'lexicons/LIWC2007.dic'
         self.start_line = 66
         self.create_LIWC_dim_maps()
         self.compute_prefixes_and_words()
