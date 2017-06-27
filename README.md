@@ -13,16 +13,16 @@ Full text available soon.
 
 [Bibtex](https://raw.githubusercontent.com/heukirne/brazilian-blog-dataset/master/santos2017portuguese.bib)
 
-## Basic Statistics
+### Basic Statistics
 https://github.com/heukirne/brazilian-blog-dataset/blob/master/blogs_stats.ipynb
 
-## Countries Stats
+### Countries Stats
 https://github.com/heukirne/brazilian-blog-dataset/blob/master/countries.json
 
-## Posts Dataset
+### Posts Dataset
 http://henrique.gemeos.org/posts.csv.gz (811MB, 1.3M posts)
 
-## Personal Story Annotated Posts
+### Personal Story Annotated Posts
 https://github.com/heukirne/brazilian-blog-dataset/raw/master/corpus.csv.gz (1K Posts)
 
 ### PUCRS NLP Group
