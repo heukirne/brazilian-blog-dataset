@@ -27,11 +27,11 @@ function getBlogChunk () {
 	count = 0;
 	readed = 0;
 	error = false;
-	var dirList = fs.readdirSync('./blogs/');
-	console.log('### getBlogChunk : ' + dirList.length + ' ###');
+	var dirList = fs.readdirSync('./blogs/tier-X/');
+	console.log('### getBlogChunk : ' + dirList.length + ' / 243046 ###');
 	blogger.readBlogIDs((blogID) => {
 		readed++
-		if (count < total && readed > (dirList.length - 5000)) {
+		if (count < total /*&& readed > (dirList.length - 5000)*/) {
 			if (!blogger.blogExist(blogID)){ 
 			   	blogEvent.emit('get',blogID);
 			}
@@ -39,4 +39,4 @@ function getBlogChunk () {
 	});
 }
 
-setInterval(getBlogChunk, 30 * 1000);
+setInterval(getBlogChunk, 35 * 1000);

@@ -16,7 +16,7 @@ var blogger = module.exports = {
 
 	readBlogIDs: (callback) => {
 		let maxChunck = 0;
-		var blogStream = fs.createReadStream("blogIDs.csv.gz");
+		var blogStream = fs.createReadStream("blogMissing.txt.gz");
 		blogStream.pipe(zlib.createGunzip())
 		.on('data', function(blogChunck) {
 			blogChunck.toString().split("\n").forEach(callback);
@@ -27,7 +27,7 @@ var blogger = module.exports = {
 	},
 
 	blogExist: (blogID) => {
-		let blogDir = './blogs/' + blogID + '/';
+		let blogDir = './blogs/tier-X/' + blogID + '/';
 		if (!fs.existsSync(blogDir)){ 
 		   	return false;
 		} else {
@@ -37,7 +37,7 @@ var blogger = module.exports = {
 
 	// Stats: 25% Blogger Api Resquest
 	blogGet: (blogID) => {
-		let blogDir = './blogs/' + blogID + '/';
+		let blogDir = './blogs/tier-X/' + blogID + '/';
 
 		if (blogger.blogExist(blogID)) { 
 			console.log(blogID + ': already exist!');
@@ -73,7 +73,7 @@ var blogger = module.exports = {
 
 	// Stats: 75% Blogger Api Resquest
 	postsGet: (blogID, postID) => {
-		let blogDir = './blogs/' + blogID + '/';
+		let blogDir = './blogs/tier-X/' + blogID + '/';
 		let postsDir = blogDir + 'posts/';
 
 		bloggerApi.posts.get({

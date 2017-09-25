@@ -65,6 +65,7 @@ function generateCSV(dirList) {
 function computeCountries(dirList) {
 	let countries = {};
 	dirList.every( (blog, idx) => {
+		console.log(blog + ', ' + idx + ' / ' + dirList.length);
 		let blogSelf = './blogs/' + blog + '/self.json';
 		try {
 		    let blogJson = JSON.parse(fs.readFileSync(blogSelf));
@@ -78,9 +79,38 @@ function computeCountries(dirList) {
 	console.log(JSON.stringify(countries))
 }
 
+function generateTitle(dirList) {
+	fs.writeFileSync('titles.csv', 'blogID,country,name,description\n');
+
+        let countries = {};
+        dirList.every( (blog, idx) => {
+		console.log(blog + ', ' + idx + ' / ' + dirList.length);
+                let blogSelf = './blogs/' + blog + '/self.json';
+                try {
+                    let blogJson = JSON.parse(fs.readFileSync(blogSelf));
+		
+		    if (blogJson.locale.country != null) {
+		    	fs.appendFileSync('titles.csv', 
+					blogJson.id +','+ 
+					blogJson.locale.country +','+ 
+					cleanTxt(blogJson.name) +','+
+					cleanTxt(blogJson.description) +'\n');
+		    }
+                } catch (e) {
+                    //
+                }
+                return true;
+        });
+        console.log(JSON.stringify(countries))
+}
+
+
 let dirList = fs.readdirSync('./blogs/');
 
 switch(process.argv[2]) {
+	case "title":
+		generateTitle(dirList);
+		break;
 	case "country": 
 		computeCountries(dirList);
 		break;
@@ -89,5 +119,5 @@ switch(process.argv[2]) {
 		break;
 	case undefined: 
 	default:
-		console.log("select an option: country, csv");
+		console.log("select an option: country, csv, title");
 }
