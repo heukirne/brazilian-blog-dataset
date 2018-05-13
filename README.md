@@ -20,8 +20,8 @@ https://github.com/heukirne/brazilian-blog-dataset/blob/master/blogs_stats.ipynb
 ### Countries Stats
 https://github.com/heukirne/brazilian-blog-dataset/blob/master/countries.json
 
-### Posts Dataset
-http://henrique.gemeos.org/posts.csv.gz (811MB, 1.3M posts)
+### Blogset-BR Dataset
+http://www.inf.pucrs.br/linatural/blogset-br (4.7 GB, 7.4M posts)
 
 ### Personal Story Annotated Posts
 https://github.com/heukirne/brazilian-blog-dataset/raw/master/corpus.csv.gz (1K Posts)
