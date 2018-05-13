@@ -8,11 +8,10 @@ Collection of Brazilian Blogspot Posts
 **Keywords:** Corpus, Natural Language Processing, Personal Story, Psycholinguistic, Social Media.
 
 [Full text](http://dl.acm.org/citation.cfm?id=3106517) , 
-[Slides](https://github.com/heukirne/brazilian-blog-dataset/blob/master/slides.pdf)
+[Slides](https://github.com/heukirne/brazilian-blog-dataset/blob/master/slides.pdf) ,
+[Bibtex](https://raw.githubusercontent.com/heukirne/brazilian-blog-dataset/master/santos2017portuguese.bib)
 
 **Complete Reference:** Henrique D. P. dos Santos, Vinicius Woloszyn, and Renata Vieira. 2017. Portuguese Personal Story Analysis and Detection in Blogs. In Proceedings of WI ’17, Leipzig, Germany, August 23-26, 2017, 7 pages. DOI: 10.1145/3106426.3106517
-
-[Bibtex](https://raw.githubusercontent.com/heukirne/brazilian-blog-dataset/master/santos2017portuguese.bib)
 
 ### Basic Statistics
 https://github.com/heukirne/brazilian-blog-dataset/blob/master/blogs_stats.ipynb
